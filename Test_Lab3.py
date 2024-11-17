@@ -1,3 +1,5 @@
+# test_Lab3.py
+
 import Lab3
 
 def test_bubble_sort_ascending():
@@ -23,13 +25,21 @@ def test_bubble_sort_empty():
     assert result == 0
 
 def test_bubble_sort_non_integer():
-    input_arr = [64, "34", 25, 12, 22, 11, 90]
+    input_arr = [64, "34", 25, 12, 22, 11, 90]  # Contains a string element
     result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
-    assert result == 2
+    assert result == 2  # Expect 2 for non-integer input
 
 def test_bubble_sort_invalid_order():
     input_arr = [64, 34, 25, 12, 22, 11, 90]
     result = Lab3.bubble_sort(input_arr, 3)
-    assert result == []
+    assert result == []  # Expect empty list for invalid order
 
-print("All tests passed.")
+if __name__ == "__main__":
+    print("Running tests...")
+    test_bubble_sort_ascending()
+    test_bubble_sort_descending()
+    test_bubble_sort_large_input()
+    test_bubble_sort_empty()
+    test_bubble_sort_non_integer()
+    test_bubble_sort_invalid_order()
+    print("All tests passed.")
