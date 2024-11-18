@@ -22,7 +22,7 @@ def total_cost_shopping():
     total_cost = 0
     for key in price_list.keys():
         if key in quantity_list:
-            total_cost += price_list[key] * quantity_list[key]
+            total_cost += price_list[key] * quantity_list[key]#changes made is this line
     
     # Round the total cost to 2 decimal places, and print correctly
     print(f"Total cost = $ {round(total_cost, 2)}")
